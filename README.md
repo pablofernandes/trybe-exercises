@@ -1,1 +1,1 @@
-In this project I intend to put everything that I'll develop in my programming course at Trybe. I'm very excited to do that and, mainly, to become the next top level develop make by Trybe... So, Let's GOTRYBER.
+In this project I intend to put everything that I'll develop in my programming course at Trybe. I'm very excited to do that and, mainly, to become the next Top Level Developer make by Trybe... So, Let's GOTRYBER.
