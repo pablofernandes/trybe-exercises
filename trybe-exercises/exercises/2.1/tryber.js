@@ -1,4 +1,4 @@
 let student = "euMesmo";
 let studentSkills = 10;
-
-console.log("Sucesso!");
+//I am a Tryber and I make
+console.log("Success!");
