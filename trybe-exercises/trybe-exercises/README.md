@@ -1,0 +1,1 @@
+In this repository I aim to register all the activities that I'll do, like: Exercises, projects, poems, musics... And a lot of much more things.
