@@ -1,0 +1,37 @@
+body{
+    font-size: 10px;
+}
+
+h1{
+    font-size: 60px;
+    color: blue;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: darkgray;
+}
+
+ul{
+    background-color: blue;
+    text-align:left;
+}
+
+p{
+    font-weight: 60;
+    font-size: 2em;
+}
+
+.modpul{
+    background-color: darkcyan;
+}
+
+#yelow{
+    color: yellow;
+}
+
+#red{
+    color: red;
+}
+
+#brown{
+    color: brown;
+}
