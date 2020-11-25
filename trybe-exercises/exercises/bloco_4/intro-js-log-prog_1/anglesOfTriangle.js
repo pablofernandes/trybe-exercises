@@ -12,7 +12,7 @@ let c = 60;
 let triangle = a + b + c;
 
 if(triangle == 180) {
-    console.log('The angles of the triangle are valid.')
+    console.log('True')
 } else{
-    console.log('The angles of the triangle are not valid.')
+    console.log('False')
 }
