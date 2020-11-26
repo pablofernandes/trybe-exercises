@@ -1,5 +1,5 @@
 /**
- * This is an exercise program to print an array in a dumb way
+ * This is an exercise program to sum the numbers in an array in a dumb way
  * 
  * By Pablo P Fernandes
  */
