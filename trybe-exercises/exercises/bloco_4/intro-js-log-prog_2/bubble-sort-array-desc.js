@@ -1,6 +1,6 @@
 /**
  * This is an exercise program to sort an array of numbers using Bubble Sort 
- * ascendenet algorithm in a for way
+ * Descendent algorithm in a for way
  * 
  * By Pablo P Fernandes
  */
@@ -9,7 +9,7 @@ let position;
 
 for (let index = 1; index < numbers.length; index++) {
     for (let pointer = 0; pointer < index; pointer++) {
-        if(numbers[index] < numbers[pointer]) {
+        if(numbers[index] > numbers[pointer]) {
             position = numbers[index];
             numbers[index] = numbers[pointer];
             numbers[pointer] = position;
