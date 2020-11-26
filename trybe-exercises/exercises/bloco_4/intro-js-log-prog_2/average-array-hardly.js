@@ -21,3 +21,9 @@ sum += numbers[9];
 average = sum/numbers.length;
 
 console.log(average);
+
+if (average > 20) {
+    console.log('The average is greater than 20.')
+} else {
+    console.log('The average is less than 20.')
+}
