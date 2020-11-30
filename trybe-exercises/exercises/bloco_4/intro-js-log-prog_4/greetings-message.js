@@ -1,3 +1,9 @@
+/**
+ * This is a program exercise to test the handlework with objects.
+ * 
+ * By Pablo P Fernandes
+ */
+
 let info = {
   personagem: "Margarida",
   origem: "Pato Donald",
