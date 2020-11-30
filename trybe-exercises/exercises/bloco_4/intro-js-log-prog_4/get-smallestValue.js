@@ -22,6 +22,7 @@ function smallestNumberIndexFinder(listToFind) {
 
    for (let index = 1; index < listToFind.length; index += 1) {
        if(listToFind[index] <= smaller) {
+           smaller = listToFind[index];
         smallerIndex = index;
        }
    }

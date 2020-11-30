@@ -22,6 +22,7 @@
 
     for (let index = 1; index < listToFind.length; index += 1) {
         if(listToFind[index] >= greater) {
+            greater = listToFind[index];
             greaterIndex = index;
         }
     }
