@@ -12,6 +12,7 @@
  let costPlusTaxes = cost * tax;
  let sellValue = costPlusTaxes * 1.10;
  let profit = (sellValue - costPlusTaxes) * 1000;
+ profit = profit.toFixed(2);
 
  if(cost <= 0 || sellValue <= 0) {
      console.log('Incorrect data entry. Be sure that you typed a value greater than zero');

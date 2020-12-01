@@ -1,5 +1,5 @@
 /**
- * This is an exercise program to create an array of numbers in an array in a for way
+ * This is an exercise program to create an array of numbers in a for way
  * 
  * By Pablo P Fernandes
  */
