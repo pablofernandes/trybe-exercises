@@ -93,6 +93,15 @@
         /**
             6 - Create a function to show all <p> tags content into web console.
         */
+        function showContentConsole() {
+            let elements = document.getElementsByTagName('p');
+
+            for (let index = 0; index < elements.length; index += 1) {
+                console.log(elements[index].innerText);
+                
+            }
+        }
+        showContentConsole();
     </script>
   </body>
 </html>
