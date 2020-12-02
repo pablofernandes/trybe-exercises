@@ -44,8 +44,6 @@
         - document.getElementById()
         - document.getElementsByClassName()
         - document.getElementsByTagName()
- 5 - Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- 6 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
 
         /** 1 - Create a function to change the <p> tag text by a description 
@@ -82,6 +80,19 @@
             elements[0].innerText = 'Exercise 5.1 - Javascript';
         }
         correctTagText();
+
+        /**
+            5 - Create a function that modify all <p> tag text to capital letters.
+        */
+        function changeIntoCapitals() {
+            let elements = document.getElementsByTagName('p');
+            elements[1].innerText = elements[1].innerText.toUpperCase();
+        }
+        changeIntoCapitals();
+
+        /**
+            6 - Create a function to show all <p> tags content into web console.
+        */
     </script>
   </body>
 </html>
