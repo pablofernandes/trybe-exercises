@@ -44,7 +44,6 @@
         - document.getElementById()
         - document.getElementsByClassName()
         - document.getElementsByTagName()
- 3 - Crie uma função que mude a cor do quadrado vermelho para branco.
  4 - Crie uma função que corrija o texto da tag <h1>.
  5 - Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  6 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
@@ -66,6 +65,15 @@
             yellowSquare[0].style.backgroundColor = "rgb(76,164,109)";
         }
         changeYellowColorToGreen();
+
+        /** 
+        3 - Create a function that change the red square color to white.
+        */
+        function changeRedColorToWhite() {
+            let redSquare = document.getElementsByClassName("center-content");
+            redSquare[0].style.backgroundColor = "white";
+        }
+        changeRedColorToWhite();
     </script>
   </body>
 </html>
