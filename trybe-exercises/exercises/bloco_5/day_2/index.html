@@ -130,11 +130,11 @@
       function headerCreatorMainContent(headType) {
           for (let index = 0; index < 3; index += 1) {
               let elementCreated = document.createElement(headType);
+              elementCreated.classList.add('description');
               document.querySelector('.main-content').appendChild(elementCreated);            
           }
       }
       headerCreatorMainContent('h3');
-
     </script>
   </body>
 </html>
