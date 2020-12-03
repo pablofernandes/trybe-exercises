@@ -111,6 +111,20 @@
       }
       imageCreator('https://picsum.photos/200');
 
+      //8 - Add an unordered list with values from 1 to 10 writen in text as itens 
+      //of the list. This list must be child of the div created at step 6
+
+      function listCreator(numbersList) {
+          let ulCreated = document.createElement('ul');
+          for (let index = 0; index < numbersList.length; index += 1) {
+              let liCreated = document.createElement('li');
+              liCreated.innerText = numbersList[index];
+              ulCreated.appendChild(liCreated);              
+          }
+          document.querySelector('.right-content').appendChild(ulCreated);
+      }
+      let numbersInWords = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+      listCreator(numbersInWords);
     </script>
   </body>
 </html>
