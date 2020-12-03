@@ -74,7 +74,31 @@
           document.body.appendChild(elementCreated);
       }
       divCreator('main-content');
+
+      //3 - Add the <div> tag with center-content class name as a son of the <div>
+      //created at the step 2.
+      function divChildCreator(className) {
+          let elementCreated = document.createElement('div');
+          elementCreated.classList.add(className);
+          document.querySelector('.main-content').appendChild(elementCreated);
+      }
+      divChildCreator('center-content');
+
+      //4 - add a <p> tag as a son of the created <div> last step and put some text
+      function addParagraphContent(message) {
+          let elementCreated = document.createElement('p');
+          elementCreated.innerText = message;
+          document.querySelector('.center-content').appendChild(elementCreated);
+      }
+      addParagraphContent('I am very exciting by doing this exercise... uhuulll!! Thanks God!');
     
+      //5 - Add a <div> tag with left-content class name as a child of the <div>
+      //tag created at step 2
+      divChildCreator('left-content');
+
+      //6 - Add a <div> tag with right-content class name as a child of the <div>
+      //tag created at step 2
+      divChildCreator('right-content');
 
     </script>
   </body>
