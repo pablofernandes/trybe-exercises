@@ -58,11 +58,24 @@
   <body>
     <script>
       // PUT YOUR CODE HERE
-      //1 Add the <h1> tag with the text "Exercício 5.2 - JavaScript DOM" as a son
+      //1 - Add the <h1> tag with the text "Exercício 5.2 - JavaScript DOM" as a son
       // of the <body> tag.
-      let elementCreated = document.createElement('h1');
-      elementCreated.innerText = 'Exercício 5.2 - JavaScript DOM';
-      document.body.appendChild(elementCreated);
+      function h1Creator(titleText){
+          let elementCreated = document.createElement('h1');
+          elementCreated.innerText = titleText;
+          document.body.appendChild(elementCreated);
+      }
+      h1Creator('Exercício 5.2 - JavaScript DOM');
+
+      //2 - Add the <div> tag with main-content class name as a son of the <body> tag
+      function divCreator(className) {
+          let elementCreated = document.createElement('div');
+          elementCreated.classList.add(className);
+          document.body.appendChild(elementCreated);
+      }
+      divCreator('main-content');
+    
+
     </script>
   </body>
 </html>
