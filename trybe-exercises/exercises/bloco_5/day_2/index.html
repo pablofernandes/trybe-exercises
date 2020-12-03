@@ -63,6 +63,7 @@
       function h1Creator(titleText){
           let elementCreated = document.createElement('h1');
           elementCreated.innerText = titleText;
+          elementCreated.title = 'Alterei esta tag com JS'
           document.body.appendChild(elementCreated);
       }
       h1Creator('Exercício 5.2 - JavaScript DOM');
