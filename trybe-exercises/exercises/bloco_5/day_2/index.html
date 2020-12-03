@@ -100,6 +100,17 @@
       //tag created at step 2
       divChildCreator('right-content');
 
+      //7 - Add an image with configured src for the value https://picsum.photos/200
+      //and small-image class name. This element must child of the div created at
+      //step 5
+      function imageCreator(imageAddress) {
+          let elementCreated = document.createElement('img');
+          elementCreated.src = imageAddress;
+          elementCreated.classList.add('small-image');
+          document.querySelector('.left-content').appendChild(elementCreated);
+      }
+      imageCreator('https://picsum.photos/200');
+
     </script>
   </body>
 </html>
