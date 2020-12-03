@@ -135,6 +135,13 @@
           }
       }
       headerCreatorMainContent('h3');
+
+      function removeElementByFather(element, father) {
+          let fatherElement = document.querySelector(father);
+          let childElement = document.querySelector(element);
+          let removedChild = fatherElement.removeChild(childElement);
+      }
+      removeElementByFather('.left-content','.main-content');
     </script>
   </body>
 </html>
