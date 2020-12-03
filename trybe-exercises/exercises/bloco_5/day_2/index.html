@@ -113,7 +113,6 @@
 
       //8 - Add an unordered list with values from 1 to 10 writen in text as itens 
       //of the list. This list must be child of the div created at step 6
-
       function listCreator(numbersList) {
           let ulCreated = document.createElement('ul');
           for (let index = 0; index < numbersList.length; index += 1) {
@@ -125,6 +124,16 @@
       }
       let numbersInWords = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
       listCreator(numbersInWords);
+
+      //9 - Add 3 h3 tags, all of them being child of div created at step 2.
+      function headerCreatorMainContent(headType) {
+          for (let index = 0; index < 3; index += 1) {
+              let elementCreated = document.createElement(headType);
+              document.querySelector('.main-content').appendChild(elementCreated);            
+          }
+      }
+      headerCreatorMainContent('h3');
+
     </script>
   </body>
 </html>
