@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        /*
+        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+        - document.getElementById()
+        - document.getElementsByClassName()
+        - document.getElementsByTagName()
+        */
+
+        /** 1 - Create a function to change the <p> tag text by a description 
+        that show how you see yourself two years from today.*/
+        function changeTagText() {
+            let tagText = document.getElementsByTagName('p');
+            tagText[1].innerText = 'I hope I will be a great software developer in Canada. So help me GOD!';
+        }
+        changeTagText();
+
+        /**
+        2 - Create a function to change the yellow square color to Trybe Green (rgb(76,164,109)).
+        */
+        function changeYellowColorToGreen() {
+            let yellowSquare = document.getElementsByClassName('main-content');
+            yellowSquare[0].style.backgroundColor = 'rgb(76,164,109)';
+        }
+        changeYellowColorToGreen();
+
+        /** 
+        3 - Create a function that change the red square color to white.
+        */
+        function changeRedColorToWhite() {
+            let redSquare = document.getElementsByClassName('center-content');
+            redSquare[0].style.backgroundColor = 'white';
+        }
+        changeRedColorToWhite();
+
+        /**
+            4 - Create a function that correct the <h1> tag text.
+        */
+        function correctTagText() {
+            let elements = document.getElementsByTagName('h1');
+            elements[0].innerText = 'Exercise 5.1 - Javascript';
+        }
+        correctTagText();
+
+        /**
+            5 - Create a function that modify all <p> tag text to capital letters.
+        */
+        function changeIntoCapitals() {
+            let elements = document.getElementsByTagName('p');
+            elements[1].innerText = elements[1].innerText.toUpperCase();
+        }
+        changeIntoCapitals();
+
+        /**
+            6 - Create a function to show all <p> tags content into web console.
+        */
+        function showContentConsole() {
+            let elements = document.getElementsByTagName('p');
+
+            for (let index = 0; index < elements.length; index += 1) {
+                console.log(elements[index].innerText);
+                
+            }
+        }
+        showContentConsole();
+    </script>
+  </body>
+</html>
