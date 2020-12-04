@@ -39,3 +39,13 @@ function createDaysOfTheWeek() {
   }
 
   createDaysOfTheMonth();
+
+  function createHolidayButton (holidayButtonName) {
+    let divFather = document.querySelector('.buttons-container');
+    let buttonCreated = document.createElement('button');
+    buttonCreated.innerText = holidayButtonName;
+    buttonCreated.id = 'btn-holiday';
+    divFather.appendChild(buttonCreated);
+  }
+
+  createHolidayButton('Feriados');
