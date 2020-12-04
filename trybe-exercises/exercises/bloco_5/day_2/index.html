@@ -155,6 +155,17 @@
           divSelected.style.backgroundColor = 'green';
       }
       changeBgColorDiv('.center-content');
+
+      //Exercise 15 - Remove the two last list item from the list created at 
+      //step 8.
+      function removeLastListItems(items) {
+          let gettedList = document.querySelector('ul');
+          for (let index = 0; index < items; index += 1) {
+              let lastItemList = gettedList.lastChild;
+              gettedList.removeChild(lastItemList);              
+          }
+      }
+      removeLastListItems(2);
     </script>
   </body>
 </html>
