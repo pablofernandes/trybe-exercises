@@ -13,6 +13,7 @@ function createDaysOfTheWeek() {
   
   createDaysOfTheWeek();
   
+  //Exercise One - Adding the days of the month
   function createDaysOfTheMonth() {
     const dezDaysList = [
         29, 30, 1, 2, 3, 4, 5, 
@@ -40,6 +41,7 @@ function createDaysOfTheWeek() {
 
   createDaysOfTheMonth();
 
+  //Exercise Two - Creating a holiday button
   function createHolidayButton (holidayButtonName) {
     let divFather = document.querySelector('.buttons-container');
     let buttonCreated = document.createElement('button');
@@ -49,3 +51,20 @@ function createDaysOfTheWeek() {
   }
 
   createHolidayButton('Feriados');
+
+  function markHolidaysWithColors () {
+      let holidays = document.getElementsByClassName('holiday');
+      for (let index = 0; index < holidays.length; index += 1) {
+        let currentColor = holidays[index].style.color;
+        let referenceColor = 'rgb(238, 238, 238)';
+        if (currentColor === referenceColor) {
+            holidays[index].style.color = '#777';
+        } else {
+          holidays[index].style.color = 'rgb(238, 238, 238)';
+        }
+      }
+  }
+
+  let holidayButton = document.querySelector('#btn-holiday');
+  holidayButton.addEventListener('mouseup', markHolidaysWithColors);
+
