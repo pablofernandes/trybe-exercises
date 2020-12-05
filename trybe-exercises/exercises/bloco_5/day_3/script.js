@@ -91,6 +91,7 @@ function createTextFriday () {
 let fridayButton = document.querySelector('#btn-friday');
 fridayButton.addEventListener('mouseup', createTextFriday);
 
+//Exercise 6 - Adding a zoom in and zoom out function
 function zoomIn (evt){
     let liTargeted = evt.target;
     if(evt.target.className){
@@ -98,6 +99,7 @@ function zoomIn (evt){
     }
 }
 
+//Exercise 6 - Adding a zoom in and zoom out function
 function zoomOut (evt) {
     liTargeted = evt.target;
 
@@ -108,5 +110,16 @@ function zoomOut (evt) {
 
 let uLDays = document.querySelector('#days');
 uLDays.addEventListener('mouseover', zoomIn);
-uLDays.addEventListener('mouseout', zoomOut)
+uLDays.addEventListener('mouseout', zoomOut);
+
+//Exercise 7 - Function to create tasks
+function createTask (taskName) {
+    let divTasks = document.querySelector('.my-tasks');
+    let createdSpan = document.createElement('span');
+    createdSpan.innerText = taskName;
+    divTasks.appendChild(createdSpan);
+}
+createTask('To cook');
+
+
 
