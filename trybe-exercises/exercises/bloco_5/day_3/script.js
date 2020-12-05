@@ -90,3 +90,23 @@ function createTextFriday () {
 
 let fridayButton = document.querySelector('#btn-friday');
 fridayButton.addEventListener('mouseup', createTextFriday);
+
+function zoomIn (evt){
+    let liTargeted = evt.target;
+    if(evt.target.className){
+        liTargeted.style.fontSize = '30px';
+    }
+}
+
+function zoomOut (evt) {
+    liTargeted = evt.target;
+
+    if (evt.target.className) {
+        liTargeted.style.fontSize = '';
+    }
+}
+
+let uLDays = document.querySelector('#days');
+uLDays.addEventListener('mouseover', zoomIn);
+uLDays.addEventListener('mouseout', zoomOut)
+
