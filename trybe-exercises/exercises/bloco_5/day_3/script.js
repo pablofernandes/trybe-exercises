@@ -54,13 +54,14 @@ function createDaysOfTheWeek() {
 
   function markHolidaysWithColors () {
       let holidays = document.getElementsByClassName('holiday');
+      let referenceColor = 'rgb(238, 238, 238)';
       for (let index = 0; index < holidays.length; index += 1) {
-        let currentColor = holidays[index].style.color;
-        let referenceColor = 'rgb(238, 238, 238)';
+        let currentColor = holidays[index].style.backgroundColor;  
         if (currentColor === referenceColor) {
-            holidays[index].style.color = '#777';
+            holidays[index].style.backgroundColor = 'lightBlue';
+
         } else {
-          holidays[index].style.color = 'rgb(238, 238, 238)';
+          holidays[index].style.backgroundColor = 'rgb(238, 238, 238)';
         }
       }
   }
