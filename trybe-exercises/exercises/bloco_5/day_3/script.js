@@ -162,4 +162,27 @@ function selectDayByTaskColor (ev) {
 }
 uLDays.addEventListener('click', selectDayByTaskColor);
 
+//Challenge Bonus - A function to add commitments to my calendar
+function addCommitments (event) {
+    let keyPressed = event.keyCode;
+    let mouseAction = event.type;
+    if (keyPressed !== 13 && mouseAction !== 'click') {
+        return null;
+    }
+    let textBox = document.getElementById('task-input');
+    let taskListUl = document.querySelector('.task-list');
+    if (textBox.value === '') {
+        alert('You should type some task text to add.');
+        return 'Invalid Entry!';
+    }
+    let createdTaskLi = document.createElement('li');
+    createdTaskLi.innerText = textBox.value;
+    taskListUl.appendChild(createdTaskLi);
+    textBox.value = '';
+}
+let buttonAddTask = document.getElementById('btn-add');
+let textInput = document.getElementById('task-input');
+buttonAddTask.addEventListener('click', addCommitments);
+textInput.addEventListener('keypress', addCommitments);
+
 
