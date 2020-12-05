@@ -73,3 +73,20 @@ function createDaysOfTheWeek() {
   //Exercise 4 - Function to create a friday button using previous function created
   createButton('Sexta-Feira', 'btn-friday');
 
+//Exercise 5 - Function to create a friday text on friday day numbers
+function createTextFriday () {
+    let fridays = document.getElementsByClassName('friday');
+    let dayToChange = "Sexta-Feira";
+    for (let index = 0; index < fridays.length; index += 1) {
+        if (fridays[index].innerText === dayToChange) {
+            let previousDay = fridays[index].previousElementSibling.innerText;
+            previousDay = (parseInt(previousDay));
+            fridays[index].innerText = previousDay + 1;
+        } else {
+            fridays[index].innerText = dayToChange;
+        }
+    }
+}
+
+let fridayButton = document.querySelector('#btn-friday');
+fridayButton.addEventListener('mouseup', createTextFriday);
