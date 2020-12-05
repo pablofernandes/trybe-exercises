@@ -70,6 +70,6 @@ function createDaysOfTheWeek() {
   holidayButton.addEventListener('mouseup', markHolidaysWithColors);
 
 
-  //Exercise 4 - Function to create a friday button
+  //Exercise 4 - Function to create a friday button using previous function created
   createButton('Sexta-Feira', 'btn-friday');
 
