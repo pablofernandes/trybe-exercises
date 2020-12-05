@@ -121,5 +121,14 @@ function createTask (taskName) {
 }
 createTask('To cook');
 
+function createColoredSubtitle (color) {
+    let grandParentDiv = document.querySelector('.my-tasks');
+    let createdDiv = document.createElement('div');
+    createdDiv.classList.add('task');
+    createdDiv.style.backgroundColor = color;
+    grandParentDiv.lastChild.appendChild(createdDiv);
+}
+createColoredSubtitle('orange');
+
 
 
