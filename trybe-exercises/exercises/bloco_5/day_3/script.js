@@ -42,30 +42,34 @@ function createDaysOfTheWeek() {
   createDaysOfTheMonth();
 
   //Exercise Two - Creating a holiday button
-  function createHolidayButton (holidayButtonName) {
+  function createButton (holidayButtonName, buttonId) {
     let divFather = document.querySelector('.buttons-container');
     let buttonCreated = document.createElement('button');
     buttonCreated.innerText = holidayButtonName;
-    buttonCreated.id = 'btn-holiday';
+    buttonCreated.id = buttonId;
     divFather.appendChild(buttonCreated);
   }
 
-  createHolidayButton('Feriados');
+  createButton('Feriados', 'btn-holiday');
 
+  //Exercise 3 - Function to mark holidays with color
   function markHolidaysWithColors () {
       let holidays = document.getElementsByClassName('holiday');
-      let referenceColor = 'rgb(238, 238, 238)';
-      for (let index = 0; index < holidays.length; index += 1) {
-        let currentColor = holidays[index].style.backgroundColor;  
+      let referenceColor = 'lightblue';
+      let currentColor = holidays[0].style.backgroundColor;
+      for (let index = 0; index < holidays.length; index += 1) { 
         if (currentColor === referenceColor) {
-            holidays[index].style.backgroundColor = 'lightBlue';
-
+            holidays[index].style.backgroundColor = 'rgb(238, 238, 238)';
         } else {
-          holidays[index].style.backgroundColor = 'rgb(238, 238, 238)';
+          holidays[index].style.backgroundColor = 'lightblue';
         }
       }
   }
 
   let holidayButton = document.querySelector('#btn-holiday');
   holidayButton.addEventListener('mouseup', markHolidaysWithColors);
+
+
+  //Exercise 4 - Function to create a friday button
+  createButton('Sexta-Feira', 'btn-friday');
 
