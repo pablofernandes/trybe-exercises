@@ -142,5 +142,24 @@ function selectColorTask (ev) {
 let divSelected = document.querySelector('.my-tasks');
 divSelected.addEventListener('click', selectColorTask);
 
+//Exercise 10 - Function to color a day according the color of my selected task.
+function selectDayByTaskColor (ev) {
+    let selectedTask = document.querySelector('.selected');
+    if (selectedTask === null){
+        alert('You must to select a task first!');
+        return null;
+    }
+    let taskColor = selectedTask.style.backgroundColor;
+    let liTargeted = ev.target;
+    let currentDayColor = liTargeted.style.color;
+    if (ev.target.className) {
+        if(taskColor === currentDayColor) {
+            liTargeted.style.color = 'rgb(119,119,119)';
+        } else {
+            liTargeted.style.color = taskColor;
+        }
+    }
+}
+uLDays.addEventListener('click', selectDayByTaskColor);
 
 
