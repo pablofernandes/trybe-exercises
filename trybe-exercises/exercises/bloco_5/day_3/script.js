@@ -92,18 +92,18 @@ let fridayButton = document.querySelector('#btn-friday');
 fridayButton.addEventListener('mouseup', createTextFriday);
 
 //Exercise 6 - Adding a zoom in and zoom out function
-function zoomIn (evt){
-    let liTargeted = evt.target;
-    if(evt.target.className){
+function zoomIn (ev){
+    let liTargeted = ev.target;
+    if(ev.target.className){
         liTargeted.style.fontSize = '30px';
     }
 }
 
 //Exercise 6 - Adding a zoom in and zoom out function
-function zoomOut (evt) {
-    liTargeted = evt.target;
+function zoomOut (ev) {
+    liTargeted = ev.target;
 
-    if (evt.target.className) {
+    if (ev.target.className) {
         liTargeted.style.fontSize = '';
     }
 }
@@ -121,6 +121,7 @@ function createTask (taskName) {
 }
 createTask('To cook');
 
+//Exercise 8 - Function to create colored subtitles.
 function createColoredSubtitle (color) {
     let grandParentDiv = document.querySelector('.my-tasks');
     let createdDiv = document.createElement('div');
@@ -129,6 +130,17 @@ function createColoredSubtitle (color) {
     grandParentDiv.lastChild.appendChild(createdDiv);
 }
 createColoredSubtitle('orange');
+
+//Exercise 9 - Function to select the color of my tasks.
+function selectColorTask (ev) {
+    divTargeted = ev.target;
+
+    if (ev.target.className === 'task' || ev.target.className === 'task selected') {
+        divTargeted.classList.toggle('selected');
+    }
+}
+let divSelected = document.querySelector('.my-tasks');
+divSelected.addEventListener('click', selectColorTask);
 
 
 
