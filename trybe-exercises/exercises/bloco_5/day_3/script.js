@@ -94,7 +94,7 @@ fridayButton.addEventListener('mouseup', createTextFriday);
 //Exercise 6 - Adding a zoom in and zoom out function
 function zoomIn (ev){
     let liTargeted = ev.target;
-    if(ev.target.className){
+    if(ev.target.className){//this solution was provided by Gabriel Oliva on live class.
         liTargeted.style.fontSize = '30px';
     }
 }
@@ -102,15 +102,14 @@ function zoomIn (ev){
 //Exercise 6 - Adding a zoom in and zoom out function
 function zoomOut (ev) {
     liTargeted = ev.target;
-
     if (ev.target.className) {
         liTargeted.style.fontSize = '';
     }
 }
 
-let uLDays = document.querySelector('#days');
-uLDays.addEventListener('mouseover', zoomIn);
-uLDays.addEventListener('mouseout', zoomOut);
+let ulDays = document.querySelector('#days');
+ulDays.addEventListener('mouseover', zoomIn);
+ulDays.addEventListener('mouseout', zoomOut);
 
 //Exercise 7 - Function to create tasks
 function createTask (taskName) {
@@ -129,7 +128,7 @@ function createColoredSubtitle (color) {
     createdDiv.style.backgroundColor = color;
     grandParentDiv.lastChild.appendChild(createdDiv);
 }
-createColoredSubtitle('orange');
+createColoredSubtitle('gold');
 
 //Exercise 9 - Function to select the color of my tasks.
 function selectColorTask (ev) {
@@ -160,7 +159,7 @@ function selectDayByTaskColor (ev) {
         }
     }
 }
-uLDays.addEventListener('click', selectDayByTaskColor);
+ulDays.addEventListener('click', selectDayByTaskColor);
 
 //Challenge Bonus - A function to add commitments to my calendar
 function addCommitments (event) {
