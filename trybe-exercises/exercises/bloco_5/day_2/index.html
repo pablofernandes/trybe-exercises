@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // PUT YOUR CODE HERE
+      //1 - Add the <h1> tag with the text "Exercício 5.2 - JavaScript DOM" as a son
+      // of the <body> tag.
+      function h1Creator(titleText){
+          let elementCreated = document.createElement('h1');
+          elementCreated.innerText = titleText;
+          elementCreated.title = 'Alterei esta tag com JS'
+          document.body.appendChild(elementCreated);
+      }
+      h1Creator('Exercício 5.2 - JavaScript DOM');
+
+      //2 - Add the <div> tag with main-content class name as a son of the <body> tag
+      function divCreator(className) {
+          let elementCreated = document.createElement('div');
+          elementCreated.classList.add(className);
+          document.body.appendChild(elementCreated);
+      }
+      divCreator('main-content');
+
+      //3 - Add the <div> tag with center-content class name as a son of the <div>
+      //created at the step 2.
+      function divChildCreator(className) {
+          let elementCreated = document.createElement('div');
+          elementCreated.classList.add(className);
+          document.querySelector('.main-content').appendChild(elementCreated);
+      }
+      divChildCreator('center-content');
+
+      //4 - add a <p> tag as a son of the created <div> last step and put some text
+      function addParagraphContent(message) {
+          let elementCreated = document.createElement('p');
+          elementCreated.innerText = message;
+          document.querySelector('.center-content').appendChild(elementCreated);
+      }
+      addParagraphContent('I am very exciting by doing this exercise... uhuulll!! Thanks God!');
+    
+      //5 - Add a <div> tag with left-content class name as a child of the <div>
+      //tag created at step 2
+      divChildCreator('left-content');
+
+      //6 - Add a <div> tag with right-content class name as a child of the <div>
+      //tag created at step 2
+      divChildCreator('right-content');
+
+      //7 - Add an image with configured src for the value https://picsum.photos/200
+      //and small-image class name. This element must child of the div created at
+      //step 5
+      function imageCreator(imageAddress) {
+          let elementCreated = document.createElement('img');
+          elementCreated.src = imageAddress;
+          elementCreated.classList.add('small-image');
+          document.querySelector('.left-content').appendChild(elementCreated);
+      }
+      imageCreator('https://picsum.photos/200');
+
+      //8 - Add an unordered list with values from 1 to 10 writen in text as itens 
+      //of the list. This list must be child of the div created at step 6
+      function listCreator(numbersList) {
+          let ulCreated = document.createElement('ul');
+          for (let index = 0; index < numbersList.length; index += 1) {
+              let liCreated = document.createElement('li');
+              liCreated.innerText = numbersList[index];
+              ulCreated.appendChild(liCreated);              
+          }
+          document.querySelector('.right-content').appendChild(ulCreated);
+      }
+      let numbersInWords = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+      listCreator(numbersInWords);
+
+      //9 - Add 3 h3 tags, all of them being child of div created at step 2.
+      function headerCreatorMainContent(headType) {
+          for (let index = 0; index < 3; index += 1) {
+              let elementCreated = document.createElement(headType);
+              elementCreated.classList.add('description');
+              document.querySelector('.main-content').appendChild(elementCreated);            
+          }
+      }
+      headerCreatorMainContent('h3');
+
+      function removeElementByFather(element, father) {
+          let fatherElement = document.querySelector(father);
+          let childElement = document.querySelector(element);
+          let removedChild = fatherElement.removeChild(childElement);
+      }
+      removeElementByFather('.left-content','.main-content');
+
+      function changeDivPosition() {
+          let div = document.querySelector('.right-content');
+          div.style = 'margin-right: auto';
+      }
+      changeDivPosition();
+
+      //Exercise 14 - Changing bg-color of div center-content
+      function changeBgColorDiv(divToChange) {
+          let divSelected = document.querySelector(divToChange);
+          divSelected.style.backgroundColor = 'green';
+      }
+      changeBgColorDiv('.center-content');
+
+      //Exercise 15 - Remove the two last list item from the list created at 
+      //step 8.
+      function removeLastListItems(items) {
+          let gettedList = document.querySelector('ul');
+          for (let index = 0; index < items; index += 1) {
+              let lastItemList = gettedList.lastChild;
+              gettedList.removeChild(lastItemList);              
+          }
+      }
+      removeLastListItems(2);
+    </script>
+  </body>
+</html>
