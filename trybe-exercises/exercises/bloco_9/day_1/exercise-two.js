@@ -1,10 +1,10 @@
-//1. Dado o código abaixo, qual a ordem de finalização de execução das linhas comentadas? A, B, C
+//2. Agora, dado o código abaixo, qual a ordem de finalização de execução das linhas comentadas? A, C, B
 
 const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
   `${name} is ${value} ${measurementUnit} apart from the Sun`;
 
 const mars = {
-  name: "Mars", 
+  name: "Mars",
   distanceFromSun: {
     value: 227900000,
     measurementUnit: "kilometers",
@@ -28,5 +28,5 @@ const jupiter = {
 };
 
 console.log(planetDistanceFromSun(mars)); // A
-console.log(planetDistanceFromSun(venus)); // B
-console.log(planetDistanceFromSun(jupiter)); // C
+setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
+setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
