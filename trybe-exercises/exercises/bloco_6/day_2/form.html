@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <title>Apply yourself</title>
 </head>
 <body>
-    <div class="nav">
-        <header class="h1" id="title">
-            <h1>Job Application Form </h1>
+    <div>
+        <header>
+            <h1 class="title">Job Application Form </h1>
+            <legend class="text-center">Insert your information and click Send Data button below</legend>
         </header>
         <hr>
     </div>
     <div class="personal-info">
-            <form class="shadow" id="personal-information">
+            <form id="personal-information">
                 <fieldset class="border rounded w-50 p-3 mx-auto shadow-lg p-3 mb-5 bg-white" id="job-personal-info">
                     <legend class="w-auto">Dados Pessoais:</legend>
                     <div class="form-group">
@@ -27,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label for="cpf">CPF: </label>
-                        <input class="form-control-sm" type="text" name="cpf" id="cpf" maxlength="11" placeholder="xxx.xxx.xxx-xx" required><br>
+                        <input class="form-control-sm" type="text" name="cpf" id="cpf" maxlength="14" placeholder="xxx.xxx.xxx-xx" required><br>
                     </div>
                     <div class="form-group">
                         <label for="address">Endereço: </label>

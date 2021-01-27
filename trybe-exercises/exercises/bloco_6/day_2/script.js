@@ -28,6 +28,15 @@ const states = [
     {state: 'Tocantins', uf: 'TO',}
 ];
 
+const sendButton = document.getElementById('btn-sub');
+sendButton.addEventListener('click', processData);
+
+function processData(evt) {
+    evt.target.preventDefault;
+    const typedData = document.getElementById('personal-information');
+    let dataGetted = [];
+}
+
 function stateOptionCreator() {
     const selectElement = document.getElementById('state-selector');
 
