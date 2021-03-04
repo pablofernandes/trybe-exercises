@@ -1,0 +1,27 @@
+body {
+    background-color: azure;
+    font-size: 25px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+#title {
+    text-align: center;
+}
+
+.text {
+    margin: auto;
+    text-indent: 5%;
+    line-height: 30px;
+}
+
+#form-font-selector {
+    display: inline-block;
+}
+
+#messages {
+    background-color: rgb(236, 181, 181);
+    font-weight: 400;
+    text-align: center;
+    color: rgb(84, 0, 0);
+}

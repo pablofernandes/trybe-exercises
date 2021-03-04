@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="title">The faboulous Screen Reader</h1>
+    </header>
+
+    <div class="commands">
+        <h3>Opcoes de Leitura:</h3>
+        <p id="messages"></p>
+        <div>
+            <label for="dark-mode">Modo escuro habilitado?</label>
+            <input type="checkbox" name="dark-mode" id="dark-mode-selector">
+        </div>
+        <div>
+            <label for="color-selector">Selecione a cor do texto: </label>
+            <select id="color-selector">
+                <option value="blue">Azul</option>
+                <option value="red">Vermelha</option>
+                <option value="green">Verde</option>
+                <option value="black">Preta</option>
+                <option value="pink">Rosa</option>
+                <option value="grey" selected>Padrao</option>
+              </select>
+        </div>
+        <div>
+            <label for="font-spacing">Digite o espacamento desejado: </label>
+            <input type="number" name="font-spacing" id="line-height-param" value="30" min="30" placeholder="Valor espacamento">
+        </div>
+        <div>
+            <label for="font-size">Tamanho da fonte: </label>
+            <input type="number" name="font-size-param" id="font-size-param" value="20" min="20"
+            placeholder="Tamanho da fonte">
+        </div>
+        <div class="font-selector">
+                <label for="font-selector">Selectione a Fonte Desejada: </label>
+                <input type="radio" id="arial" name="selector" value="Arial">
+                <label for="arial">Arial</label>
+                <input type="radio" id="verdana" name="selector" value="Verdana">
+                <label for="verdana">Verdana</label>
+                <input type="radio" id="cursiva" name="selector" value="cursive">
+                <label for="cursive">Cursive</label>
+                <input type="radio" id="geneva" name="selector" value="Geneva">
+                <label for="tahoma">Geneva</label>
+                <input type="radio" id="padrao" name="selector" value="Tahoma">
+                <label for="padrao">Padrao</label>
+        </div>
+    </div>
+    <div class="text">
+        <h3 class="subtitle">Lorem Ipsum</h3>
+        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, 
+            adipisci velit..."
+            "There is no one who loves pain itself, who seeks after it and wants to have it, 
+            simply because it is pain..."</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam odio, congue sed erat et, 
+            luctus euismod arcu. Etiam bibendum sapien sit amet dolor viverra, a mollis nisi maximus. 
+            Donec venenatis, eros maximus vehicula laoreet, nisi massa vehicula ipsum, nec placerat dolor
+            mauris nec est. Sed maximus tempus est ut sollicitudin. Suspendisse potenti. Mauris sagittis 
+            risus id rhoncus cursus. Aenean lobortis auctor diam id maximus. In tortor lorem, cursus non 
+            metus tristique, bibendum fringilla augue. Aenean turpis magna, egestas a elementum sit amet, 
+            finibus sed justo. Fusce blandit risus convallis, pulvinar neque nec, blandit nibh.</p>
+        <p>Phasellus urna lacus, bibendum vitae porttitor ut, placerat auctor dolor. 
+            Donec mollis orci in nisi aliquam dignissim. Suspendisse rhoncus orci id massa iaculis luctus. 
+            Praesent felis lorem, mollis in posuere ut, pellentesque quis tellus. Curabitur rhoncus orci eu 
+            velit tincidunt rutrum. Quisque imperdiet vehicula purus, vel egestas sapien. Ut sed metus 
+            interdum lorem tristique accumsan ut eget eros. Etiam varius fringilla placerat. Proin aliquet, 
+            ante et pretium convallis, risus massa pulvinar est, at posuere ante nibh ut dui. Sed pulvinar 
+            eros et dapibus tincidunt. Quisque sit amet augue non arcu aliquam euismod nec sit amet augue. 
+            Integer cursus mi lacus, non vestibulum ante vestibulum sed.</p>
+        <p>Etiam nisl sapien, lobortis sed vestibulum luctus, pretium gravida felis. 
+            Sed sodales ultricies turpis a ultrices. Nam ipsum nisi, dignissim eu efficitur quis, mattis 
+            sed magna. Duis vehicula tincidunt sem, non blandit leo molestie id. Sed et bibendum ipsum. 
+            Nunc lobortis massa nec nunc posuere, sit amet tempor dui mollis. Etiam facilisis urna eu mauris
+             rhoncus fringilla. Sed justo sem, mollis ac ante vitae, interdum imperdiet est. Nullam nec 
+             aliquam elit, in euismod ante. Aliquam condimentum augue ut iaculis gravida. Donec iaculis 
+             dignissim tincidunt.</p>
+    </div>
+</body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apply yourself</title>
+</head>
+<body>
+    <header id="title">
+        <h1>Job Application Form </h1>
+    </header>
+    <div class="personal-info">
+            <form id="personal-information">
+                <fieldset id="job-personal-info">
+                    <legend>Dados Pessoais:</legend>
+                    <label for="name">Nome: </label>
+                    <input type="text" name="name" id="name" maxlength="40" placeholder="Enter your fullname" required><br>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" maxlength="50" placeholder="email@mail.com" required><br>
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="xxx.xxx.xxx-xx" required><br>
+                    <label for="address">Endereço: </label>
+                    <input type="text" name="address" id="address" maxlength="200" placeholder="Your address" required><br>
+                    <label for="city">Cidade: </label>
+                    <input type="text" name="city" id="city" maxlength="28" placeholder="Your city" required><br>
+                    <label for="state">Estado: </label>
+                    <select name="state" id="state-selector"></select><br>
+                    <label for="complement">Tipo de Imóvel: </label>
+                    <label for="house">
+                        <input type="radio" name="complement" id="house" value="house" required> Casa
+                    </label>
+                    <label for="apartment">
+                        <input type="radio" name="complement" id="apartment" value="apartment" required>Apartamento
+                    </label>
+                </fieldset>
+                <fieldset id="last-job-information">
+                    <legend>Dados trabalhos recentes: </legend>
+                    <label for="abstract">Resumo do Currículo: </label>
+                    <textarea name="abstract" id="abstract" cols="30" rows="10" maxlength="1000" placeholder="Your last job activities description" required></textarea>
+                    <br>
+                    <label for="job">Cargo: </label>
+                    <input type="text" name="job" id="job" maxlength="40" placeholder="Your job name" required>
+                    <br>
+                    <label for="job-description"> Descrição do cargo: </label>
+                    <input type="text" name="job-description" id="job-description" maxlength="500" placeholder="Your job description" required>
+                    <br>
+                    <label for="start-date">Data de início </label>
+                    <input type="date" name="start-date" id="start-date" maxlength="10" pattern="^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$" required>
+                </fieldset>
+                <button type="submit" id="btn-sub">Send Data</button>
+                <button type="reset" id="btn-res">Clean Data</button>
+        </form>
+    </div>
+    <div class="sended-data">
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
